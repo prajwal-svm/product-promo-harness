@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "pack": "saas-kinetic",
+  "language": "en",
+  "canvas": { "aspect": "16:9", "width": 1920, "height": 1080, "fps": 60 },
+  "timing_mode": "music",
+  "preroll_s": 0.0,
+  "music": {
+    "bpm": 120,
+    "beats_per_bar": 4,
+    "provider": "lyria",
+    "style": {
+      "mood": "hype, bright and punchy electronic pop; a product launch sting that hits from the first beat",
+      "instrumentation": "punchy four-on-the-floor kick, crisp claps, off-beat open hi-hats, gritty synth bass, bright supersaw stabs",
+      "arrangement": "full energy from the first downbeat, a riser into the last bar, a hard final hit on the last downbeat",
+      "negative": "vocals, lyrics, spoken word, vocal chops, soft intro, fade-in, breakdown, silence, dubstep wobble"
+    }
+  },
+  "claims": [
+    { "id": "k-oss", "text": "Open source under the MIT licence", "source": "LICENSE (MIT)" },
+    { "id": "k-pipeline", "text": "One script becomes a video: AI voice, music on the beat, click sound effects, captions; 60 fps, mastered to -14 LUFS", "source": "promo voice / music / sfx / captions / assemble (README)" }
+  ],
+  "chapters": [
+    {
+      "id": "c01",
+      "purpose": "Launch sting for the open-source harness: one script in, a launch video out",
+      "headline": { "text": "Open source.", "key": "Open" },
+      "bars": 5,
+      "vo": [],
+      "shots": [
+        {
+          "id": "s1",
+          "text_mode": "labels-only",
+          "visual": {
+            "composition": "white dot-grid field; lime star logo; lime blob floods; a script card, a timeline, a render bar, an end card",
+            "objects": ["lime star logo", "jelly cursor", "script card", "timeline", "render bar", "player", "end card"]
+          },
+          "sound": { "music_cue": "the full punchy beat from the first downbeat, bright supersaw stabs, a riser into the last bar, a hard final hit on the last downbeat" },
+          "events": [
+            { "id": "e-logo", "kind": "pop", "at": { "beat": 0 }, "sfx": "pop" },
+            { "id": "e-flood", "kind": "flood", "at": { "beat": 2 }, "sfx": "whoosh" },
+            { "id": "e-word", "kind": "headline", "at": { "beat": 2.5 }, "sfx": "tick" },
+            { "id": "e-wipe", "kind": "wipe", "at": { "beat": 4 }, "sfx": "whoosh" },
+            { "id": "e-type", "kind": "type", "at": { "beat": 5 } },
+            { "id": "e-click", "kind": "click", "at": { "beat": 7 }, "sfx": "click" },
+            { "id": "e-tracks", "kind": "tracks", "at": { "beat": 8 }, "sfx": "whoosh" },
+            { "id": "e-voice", "kind": "clip", "at": { "beat": 8.5 }, "sfx": "pop" },
+            { "id": "e-music", "kind": "clip", "at": { "beat": 9 }, "sfx": "pop" },
+            { "id": "e-sfx", "kind": "clip", "at": { "beat": 9.5 }, "sfx": "pop" },
+            { "id": "e-caps", "kind": "clip", "at": { "beat": 10 }, "sfx": "pop" },
+            { "id": "e-render", "kind": "click", "at": { "beat": 11.5 }, "sfx": "click" },
+            { "id": "e-done", "kind": "done", "at": { "beat": 14 }, "sfx": "pop" },
+            { "id": "e-flood2", "kind": "flood", "at": { "beat": 16 }, "sfx": "whoosh" },
+            { "id": "e-end", "kind": "headline", "at": { "beat": 16.5 }, "sfx": "impact" },
+            { "id": "e-sub", "kind": "headline", "at": { "beat": 17.5 } },
+            { "id": "e-star", "kind": "pop", "at": { "beat": 18 }, "sfx": "pop" }
+          ]
+        }
+      ]
+    }
+  ]
+}

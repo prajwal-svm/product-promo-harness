@@ -1,0 +1,8 @@
+{
+  "sfx_gain_db": -12,
+  "headline": {"synth": "whoosh", "duration": 0.3},
+  "dock": {"synth": "whoosh", "duration": 0.35},
+  "click": {"synth": "click"},
+  "card": {"synth": "pop"},
+  "tick": {"synth": "tick"}
+}

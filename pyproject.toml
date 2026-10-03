@@ -1,0 +1,44 @@
+[project]
+name = "product-promo-harness"
+version = "0.1.0"
+description = "Claude Code harness for showreel-grade product promo videos: one script in, a launch video out"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Prajwal Murthy" }]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "typer>=0.12",
+  "pydantic>=2.8",
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+  "numpy>=2.0",
+  "pillow>=10.4",
+  "soundfile>=0.12",
+  "librosa>=0.10.2",
+  "opentimelineio==0.18.1",
+  "num2words>=0.5.13",
+  "parakeet-mlx>=0.5",
+  "mlx-whisper>=0.4.3",
+]
+
+[project.urls]
+Repository = "https://github.com/prajwal-svm/product-promo-harness"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "respx>=0.21"]
+
+[project.scripts]
+promo = "promo.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["promo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: calls real APIs or renders (needs keys, network, Chrome)"]
+addopts = "-m 'not live'"

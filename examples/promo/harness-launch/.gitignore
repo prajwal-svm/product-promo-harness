@@ -1,0 +1,9 @@
+renders/
+audio/
+clips/
+captions/overlay/
+critic/*/evidence/
+scenes/.render/
+scenes/snapshots/
+logs/
+review-now/

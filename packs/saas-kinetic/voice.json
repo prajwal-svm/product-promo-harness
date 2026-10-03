@@ -1,0 +1,17 @@
+{
+  "voice": "Kore",
+  "fallback_voices": ["Aoede", "Leda", "Autonoe", "Callirrhoe"],
+  "style": "warm, confident, conversational, lightly upbeat; brisk within the line",
+  "supertonic": {
+    "voice": "F2",
+    "fallback_voices": ["F1", "F3", "M1", "M2"],
+    "model": "supertonic-2",
+    "steps": 12,
+    "speed": 1.25,
+    "silence_s": 0.3,
+    "pace_wpm": 170
+  },
+  "register": "ad-sparse",
+  "pace_wpm": 190,
+  "granularity": "line"
+}

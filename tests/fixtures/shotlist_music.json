@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "pack": "saas-kinetic",
+  "language": "en",
+  "canvas": {"aspect": "16:9", "width": 1920, "height": 1080, "fps": 60},
+  "timing_mode": "music",
+  "preroll_s": 0.3,
+  "music": {"bpm": 120, "beats_per_bar": 4},
+  "pronounce": {"Signet": "Sig-nit"},
+  "claims": [{"id": "k1", "text": "Reversals over $10,000 need a Risk sign-off", "source": "docs/rules.md#L12"}],
+  "chapters": [
+    {
+      "id": "c01",
+      "purpose": "Hook",
+      "headline": {"text": "Just got safer", "key": "safer"},
+      "bars": 2,
+      "vo": [{"id": "c01-l1", "text": "Moving company money just got safer.", "style": "confident", "at": {"beat": 1}}],
+      "shots": [
+        {
+          "id": "c01-s1",
+          "text_mode": "paraphrase",
+          "visual": {"composition": "headline centre", "camera": "slow push", "locked": ["background"]},
+          "motion": {"entrance": "words rise", "primary": "key word lands", "secondary": "check pops", "exit": "headline docks"},
+          "reads": [{"what": "safer is the promise", "from": {"beat": 2}, "to": {"beat": 5}}],
+          "events": [
+            {"id": "c01-e1", "kind": "headline", "at": {"beat": 0}, "sfx": "headline"},
+            {"id": "c01-e2", "kind": "click", "at": {"line": "c01-l1", "word": "safer", "offset": -0.03}, "sfx": "click"}
+          ],
+          "transition_out": {"kind": "push-through", "carrier": "the check badge becomes the dashboard dot", "meaning": "safety leads into the product"}
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "headline": {"text": "Every money move, in view", "key": "in view"},
+      "bars": 2,
+      "vo": [
+        {"id": "c02-l1", "text": "Reversals over $10,000?", "at": {"beat": 0}, "claims": ["k1"]},
+        {"id": "c02-l2", "text": "Risk has to sign off.", "at": {"after": "c02-l1", "gap": 0.2}}
+      ],
+      "shots": [
+        {"id": "c02-s1", "beats": 4, "events": [{"id": "c02-e1", "kind": "card", "at": {"beat": 0.5}, "sfx": "card"}]},
+        {"id": "c02-s2", "events": [{"id": "c02-e2", "kind": "tick", "at": {"shot": "c02-s2", "edge": "start", "offset": 0.4}, "sfx": "tick"}]}
+      ]
+    }
+  ]
+}

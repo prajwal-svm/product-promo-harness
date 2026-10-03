@@ -1,0 +1,241 @@
+{
+  "version": 1,
+  "duration_s": 10.0,
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "aspect": "16:9",
+  "preroll_s": 0.0,
+  "timing_mode": "music",
+  "bpm": 119.988,
+  "beats_per_bar": 4,
+  "beats": [
+    0.0001,
+    0.5002,
+    1.0002,
+    1.5003,
+    2.0003,
+    2.5004,
+    3.0004,
+    3.5005,
+    4.0005,
+    4.5006,
+    5.0006,
+    5.5007,
+    6.0007,
+    6.5008,
+    7.0008,
+    7.5009,
+    8.0009,
+    8.501,
+    9.001,
+    9.5011
+  ],
+  "limits": {
+    "min_read_s": 0.8,
+    "max_dead_s": 4.0,
+    "hook_by_s": 2.0,
+    "head_pad_s": 0.3,
+    "tail_pad_s": 0.4,
+    "line_gap_s": 0.3,
+    "text_lag_s": 0.08,
+    "pace_wpm": 190.0
+  },
+  "chapters": [
+    {
+      "id": "c01",
+      "start_s": 0.0,
+      "end_s": 10.0,
+      "headline": {
+        "text": "Open source.",
+        "key": "Open"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "s1",
+      "chapter": "c01",
+      "start_s": 0.0,
+      "end_s": 10.0,
+      "engine": "hyperframes",
+      "source": null,
+      "text_mode": "labels-only"
+    }
+  ],
+  "lines": [],
+  "events": [
+    {
+      "id": "e-logo",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "pop",
+      "t": 0.0001,
+      "t_local": 0.0001,
+      "sfx": "pop",
+      "value": null
+    },
+    {
+      "id": "e-flood",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "flood",
+      "t": 1.0002,
+      "t_local": 1.0002,
+      "sfx": "whoosh",
+      "value": null
+    },
+    {
+      "id": "e-word",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "headline",
+      "t": 1.2502,
+      "t_local": 1.2502,
+      "sfx": "tick",
+      "value": null
+    },
+    {
+      "id": "e-wipe",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "wipe",
+      "t": 2.0003,
+      "t_local": 2.0003,
+      "sfx": "whoosh",
+      "value": null
+    },
+    {
+      "id": "e-type",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "type",
+      "t": 2.5004,
+      "t_local": 2.5004,
+      "sfx": null,
+      "value": null
+    },
+    {
+      "id": "e-click",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "click",
+      "t": 3.5005,
+      "t_local": 3.5005,
+      "sfx": "click",
+      "value": null
+    },
+    {
+      "id": "e-tracks",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "tracks",
+      "t": 4.0005,
+      "t_local": 4.0005,
+      "sfx": "whoosh",
+      "value": null
+    },
+    {
+      "id": "e-voice",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "clip",
+      "t": 4.2506,
+      "t_local": 4.2506,
+      "sfx": "pop",
+      "value": null
+    },
+    {
+      "id": "e-music",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "clip",
+      "t": 4.5006,
+      "t_local": 4.5006,
+      "sfx": "pop",
+      "value": null
+    },
+    {
+      "id": "e-sfx",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "clip",
+      "t": 4.7506,
+      "t_local": 4.7506,
+      "sfx": "pop",
+      "value": null
+    },
+    {
+      "id": "e-caps",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "clip",
+      "t": 5.0006,
+      "t_local": 5.0006,
+      "sfx": "pop",
+      "value": null
+    },
+    {
+      "id": "e-render",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "click",
+      "t": 5.7507,
+      "t_local": 5.7507,
+      "sfx": "click",
+      "value": null
+    },
+    {
+      "id": "e-done",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "done",
+      "t": 7.0008,
+      "t_local": 7.0008,
+      "sfx": "pop",
+      "value": null
+    },
+    {
+      "id": "e-flood2",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "flood",
+      "t": 8.0009,
+      "t_local": 8.0009,
+      "sfx": "whoosh",
+      "value": null
+    },
+    {
+      "id": "e-end",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "headline",
+      "t": 8.2509,
+      "t_local": 8.2509,
+      "sfx": "impact",
+      "value": null
+    },
+    {
+      "id": "e-sub",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "headline",
+      "t": 8.751,
+      "t_local": 8.751,
+      "sfx": null,
+      "value": null
+    },
+    {
+      "id": "e-star",
+      "shot": "s1",
+      "chapter": "c01",
+      "kind": "pop",
+      "t": 9.001,
+      "t_local": 9.001,
+      "sfx": "pop",
+      "value": null
+    }
+  ],
+  "reads": [],
+  "findings": []
+}

@@ -1,0 +1,33 @@
+{
+  "tokens": {
+    "fps": 60,
+    "colors": {"bg": "#101114", "bg_alt": "#16181D", "accent": "#7CFFB2", "accent_ink": "#0B0C0E",
+               "dark": "#08090B", "surface": "#1B1D22", "ink": "#F4F4F0", "muted": "#9AA0A6",
+               "shadow": "rgba(0,0,0,0.35)"},
+    "fonts": {"display": {"family": "PromoDisplay", "file": "assets/fonts/InterVariable.woff2", "weight": 600, "tracking_em": -0.02},
+              "ui": {"family": "PromoDisplay", "file": "assets/fonts/InterVariable.woff2", "weight": 500, "tracking_em": 0}},
+    "radii": {"card": 20, "control": 14, "pill": 999},
+    "springs": {"ui": "snappy", "type": "heavy", "camera": "default", "mascot": "playful"},
+    "type_scale": {"16:9": {"headline_px": 88, "ui_px": 20}, "9:16": {"headline_px": 96, "ui_px": 24}, "1:1": {"headline_px": 88, "ui_px": 22}},
+    "safe_area": {"16:9": {"x": 96, "y": 80}, "9:16": {"x": 80, "y": 120}, "1:1": {"x": 80, "y": 80}},
+    "min_type_px": {"headline": 84, "body": 44},
+    "caption_band": {"16:9": [0.80, 0.94], "9:16": [0.70, 0.86], "1:1": [0.78, 0.92]},
+    "limits": {"min_read_s": 0.8, "max_dead_s": 4.0, "hook_by_s": 2.0, "head_pad_s": 0.3,
+               "tail_pad_s": 0.4, "line_gap_s": 0.3, "text_lag_s": 0.08}
+  },
+  "structure": {"arc": "promo", "text_mode": "paraphrase", "timing_mode": "music", "payoff_interval_s": 4.0, "allow": []},
+  "voice": {"provider": "gemini", "model": "gemini-3.8-flash-tts", "audition_model": "gemini-3.8-flash-lite-tts",
+            "voice": "Kore", "fallback_voices": ["Aoede", "Leda"], "style": "warm, clear, conversational",
+            "register": "ad-sparse", "pace_wpm": 170, "granularity": "line", "vo_lufs": -16},
+  "music": {"mode": "bed", "bpm": 96, "mood": "modern, confident", "instrumentation": "clean electronic",
+            "arrangement": "gentle build, clean ending", "negative": "vocals, lyrics, spoken word",
+            "lufs": -14, "true_peak": -1.0, "tail_s": 1.5, "duck_db": 7, "fade_out_s": 1.0, "bed_lufs": -22},
+  "sfx": {"sfx_gain_db": -10,
+          "click": {"synth": "click"}, "tick": {"synth": "tick"}, "key": {"synth": "key"}, "pop": {"synth": "pop"},
+          "card": {"synth": "pop"}, "reveal": {"synth": "pop"}, "headline": {"synth": "whoosh", "duration": 0.3},
+          "dock": {"synth": "whoosh", "duration": 0.35}, "whoosh": {"synth": "whoosh"}, "impact": {"synth": "impact"},
+          "sub": {"synth": "sub_boom"}, "riser": {"synth": "riser"}, "chime": {"synth": "chime"}},
+  "captions": {"mode": {"16:9": "none", "9:16": "subtitle", "1:1": "subtitle"},
+               "max_chars": {"16:9": 32, "9:16": 22, "1:1": 26}, "max_lines": 2, "pause_ms": 250, "min_ms": 700,
+               "style": {"size_px": 54, "weight": 600, "color": "ink", "highlight": "accent", "plate": "rgba(0,0,0,0.0)"}}
+}

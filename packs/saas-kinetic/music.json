@@ -1,0 +1,11 @@
+{
+  "mode": "bed",
+  "bpm": 92,
+  "bpm_range": [88, 100],
+  "mood": "modern, upbeat, optimistic, clean product-launch energy",
+  "instrumentation": "bright plucks, soft kick, claps, warm sub bass, airy pads",
+  "arrangement": "risers into each chapter, a filtered drop for the dark beat, a clean ending on the logo",
+  "negative": "vocals, lyrics, spoken word, heavy distortion, dubstep wobble",
+  "lufs": -14,
+  "true_peak": -1.0
+}

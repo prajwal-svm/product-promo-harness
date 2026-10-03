@@ -1,0 +1,12 @@
+{
+  "arc": "promo",
+  "text_mode": "paraphrase",
+  "timing_mode": "music",
+  "chapter_bars": [2, 3],
+  "payoff_interval_s": 4.0,
+  "no_hard_cuts": true,
+  "allow": [
+    {"id": "idle-sine-loop", "reason": "Lime 3D props, sharp, layered by scale and parallax, float behind the UI as in the reference; never on type or UI."},
+    {"id": "shockwave-ring", "reason": "One thin lime ring wipe between beats is a Signet signature move; at most one per chapter."}
+  ]
+}

@@ -1,0 +1,18 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+# smoke-run outputs
+examples/**/renders/
+examples/**/audio/
+examples/**/clips/
+examples/**/captions/overlay/
+examples/**/critic/*/evidence/
+examples/**/scenes/.render/
+examples/**/scenes/snapshots/
+examples/**/review-now/
+examples/**/costs.jsonl
+examples/**/timeline.otio

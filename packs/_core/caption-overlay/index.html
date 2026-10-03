@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "PromoDisplay";
+        src: url("assets/fonts/InterVariable.woff2") format("woff2");
+        font-weight: 100 900;
+      }
+      html, body { margin: 0; width: 100%; height: 100%; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "PromoDisplay", system-ui, sans-serif; }
+      .page { position: absolute; left: 8%; right: 8%; display: flex; justify-content: center; opacity: 0; line-height: 1.15; }
+      .plate { box-sizing: border-box; max-width: 100%; text-align: center; }
+      .plate.tinted { padding-block: 0.2em; border-radius: 0.35em; }
+      .page .w { display: inline-block; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="captions" data-start="0" data-duration="1" data-width="1920" data-height="1080" data-fps="60"></div>
+    <script>
+      (async () => {
+        try {
+          const res = await fetch("captions.json");
+          if (!res.ok) throw new Error("captions.json: HTTP " + res.status);
+          const data = await res.json();
+          // fonts.ready resolves at once while no text uses the face yet, so load every declared face first.
+          await Promise.all([...document.fonts].map((f) => f.load().catch(() => null)));
+          await document.fonts.ready;
+          const root = document.getElementById("root");
+          const st = data.style;
+          const box = data.box || {};
+          // Legibility is a soft shadow under the glyphs (colour from style.shadow, "none" for no shadow) and,
+          // when style.plate is set, a tint behind each page. Both are tints, never a stroke.
+          const shadow = st.shadow || "rgba(0, 0, 0, 0.45)";
+          const textShadow = shadow === "none" ? "none" : "0 2px 14px " + shadow;
+          const tl = gsap.timeline({ paused: true });
+          for (const page of data.pages) {
+            const el = document.createElement("div");
+            el.className = "page";
+            el.setAttribute("data-layout-allow-caption-zone", "");
+            el.style.top = data.band[0] * 100 + "%";
+            if (box.margin != null) el.style.left = el.style.right = box.margin * 100 + "%";
+            el.style.fontSize = st.size_px + "px";
+            el.style.fontWeight = st.weight;
+            el.style.color = st.color;
+            const plate = document.createElement("div");
+            plate.className = "plate";
+            plate.style.textShadow = textShadow;
+            if (st.plate) {
+              plate.classList.add("tinted");
+              plate.style.background = st.plate;
+              plate.style.paddingInline = (box.plate_pad_x_em != null ? box.plate_pad_x_em : 0.5) + "em";
+            }
+            el.appendChild(plate);
+            page.words.forEach((w, i) => {
+              if (i > 0) plate.appendChild(document.createTextNode(" "));
+              const span = document.createElement("span");
+              span.className = "w";
+              span.textContent = w.text;
+              plate.appendChild(span);
+              tl.set(span, { color: st.highlight }, w.startMs / 1000);
+              tl.set(span, { color: st.color }, w.endMs / 1000);
+            });
+            root.appendChild(el);
+            tl.set(el, { opacity: 1 }, page.startMs / 1000);
+            tl.set(el, { opacity: 0 }, page.endMs / 1000);
+          }
+          // Registered last, after all async setup; the timeline is never returned from this async function.
+          window.__timelines = window.__timelines || {};
+          window.__timelines["captions"] = tl;
+        } catch (e) {
+          console.error("caption overlay failed: " + e.message);
+          throw e;
+        }
+      })();
+    </script>
+  </body>
+</html>
